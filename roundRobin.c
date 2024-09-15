@@ -86,7 +86,7 @@ void main()
  }
 
  int clockCycle = 0; // clockCycle is the variable keeps track of iteration of the loop each iteration is considered a cycle for this simulation of round robin process scheduling algorithm.
- while (!isEmpty())
+ do
  {
   if ((processPtr < PROCESS) /*check for AIOOB Exception*/ && processes[processPtr]->arrivalTime == clockCycle /*Checks whether current process at processPtr is arriving.*/)
   {
@@ -120,5 +120,5 @@ void main()
    sliceTime--;
   }
   clockCycle++; // clock cycle gets incremented as the one iteration has been completed.
- }
+ }while(!isEmpty());
 }
