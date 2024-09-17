@@ -7,7 +7,7 @@ struct process // structure for a process
 {
  int id;
  int burstTime;        // process have burst time
- int arrivalTime;      // a process arrives at a time quantum
+ int arrivalTime;      // a process arrives at a time
  struct process *next; // next pointer which will point the next process to be executed in the processor
 };
 
